@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="css/payment-form.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <title>Payment</title>
+</head>
+
+<body>
+    <div id="pop-up" class="modal">
+        <div Payment-message="response"> Thanks for clicking. That felt good. </div>
+        <a href="#" rel="modal:close">Close</a>
+    </div>
+    <form payment-form="form">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="Mr.">
+                            Mr.
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="Mrs.">
+                            Mrs.
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_3">
+                            <input type="radio" id="title_3" name="title" value="Miss">
+                            Miss
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="name">
+                    <span>Name: </span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="name" name="username">
+            </p>
+            <p>
+                <label for="mail">
+                    <span>E-mail: </span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail">
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password: </span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" id="pwd" name="password">
+            </p>
+        </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+                <label for="card">
+                    <span>Card type:</span>
+                </label>
+                <select id="card" name="usercard">
+                    <option value="visa">Visa</option>
+                    <option value="mc">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>Card number:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="tel" id="number" name="cardnumber">
+            </p>
+            <p>
+                <label for="date">
+                    <span>Expiration date:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                    <em>formatted as mm/yy</em>
+                </label>
+                <input type="date" id="date" name="expiration">
+            </p>
+        </section>
+
+        <section>
+            <p>
+                <button>
+                    <a type="submit">Validate the payment</a>
+                </button>
+            </p>
+        </section>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
+    <script src="scripts/main_payment.js" charset="utf-8"></script>
+</body>
+
+</html>
+
+<div id="ex1" class="modal">
+    <p>Thanks for clicking. That felt good.</p>
+    <a href="#" rel="modal:close">Close</a>
+</div>
